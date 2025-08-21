@@ -1,0 +1,36 @@
+/* Empty. Add your own CSS if you like */
+.mybox {   
+    top-padding: 10px;
+}
+.drink-container {
+    margin-top:10px;
+    float: left;
+	height: 175px;
+	width: 100px;
+	margin-bottom: 0px;
+    border: solid 1px white;
+}
+.drink-icon {
+	height: 100px;
+	width: 100px;
+}
+.drink-img {
+	height: 100px;
+	width: 100px;
+}
+.drink-count {
+    font-family: Veranda, Serif;
+ 	font-style: normal;
+	font-size: 32px;
+	font-decoration: bold;
+	text-align: center;
+	padding-top: 10px;
+}
+.drink-name {
+    font-family: Veranda, Serif;
+ 	font-style: italic;
+	font-size: 16px;
+	font-decoration: bold;
+	text-align: center;
+	padding-bottom: 5px;
+}

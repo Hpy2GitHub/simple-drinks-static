@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Drinks!</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/ionic/css/ionic-glyphs.css">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+      
+    <!-- angular style wrapper for localStorage -->
+    <script src="js/ngStorage.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <!--body ng-app="starter" ng-controller="MainCtrl" class="platform-browser">
+   <ion-pane>
+      <ion-header-bar class="bar-assertive">
+        <button class="button button-icon ion-minus-round" ng-click="rmDirection()"></button>
+        <h1 class="title">Drinks Tracker</h1>
+        <button class="button button-icon ion-plus-round" ng-click="addDirection()"></button>
+      </ion-header-bar>
+        <ion-content>
+       <div class="mybox">
+            <div ng-repeat="drink in drinks">
+                <div class='drink-container'>
+                    <div class='drink-name'>{{ drink.name }}</div>
+                    <div class='drink-icon'><a href='' ng-click="imgClicked({{drink.id}})"><img src='img/{{drink.img}}.png' alt='{{drink.name}}' class='drink-img'></a></div>
+                  <div class='drink-count'>{{drink.count}}</div>
+                </div>
+           </div></div>
+       </ion-content>
+        <div class="bar bar-footer bar-assertive">
+            <button class="button button-icon ion-close lc" ng-click="clearAll()"></button>
+            <!--button class="button button-icon ion-cloud rc" ng-click="saveAll()"></button-->
+            <button class="button button-icon ion-arrow-down-a" ng-click="downloadData()"></button>
+            <button class="button button-icon ion-arrow-up-a" ng-click="uploadData()"></button>
+        </div>
+      </ion-pane>   
+  </body-->
+
+<body ng-app="starter" ng-controller="MainCtrl" class="platform-browser">
+
+  <!---- NEW phone-sized wrapper  -->
+  <div class="android-container">
+
+    <ion-pane>
+      <ion-header-bar class="bar-assertive">
+        <button class="button button-icon ion-minus-round"
+                ng-click="rmDirection()"></button>
+        <h1 class="title">Drinks Tracker</h1>
+        <button class="button button-icon ion-plus-round"
+                ng-click="addDirection()"></button>
+      </ion-header-bar>
+
+      <ion-content>
+
+        <!---- NEW 3 × 3 grid wrapper  -->
+        <div class="drink-grid">
+
+          <!-- your existing ng-repeat list STARTS here -->
+          <div ng-repeat="drink in drinks">
+            …
+          </div>
+          <!-- your existing list ENDS here -->
+
+        </div> <!-- /drink-grid -->
+
+      </ion-content>
+
+      … (rest of file unchanged) …
+
+    </ion-pane>
+
+  </div> <!-- /android-container -->
+</body>
+
+</html>

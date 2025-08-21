@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="starter" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Drinks Tracker</title>
+
+  <!-- Ionic core (already in your repo) -->
+  <link rel="stylesheet" href="lib/ionic/css/ionic.min.css">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- --------------  NEW STYLES FOR FIXED PHONE LAYOUT -------------- -->
+  <style>
+    /* Phone-shaped wrapper */
+    .android-container{
+      width:360px;          /* old Android width */
+      height:640px;         /* old Android height */
+      margin:20px auto;     /* center on page */
+      background:#f5f5f5;
+      border-radius:20px;
+      box-shadow:0 4px 20px rgba(0,0,0,.3);
+      overflow:hidden;
+      position:relative;
+    }
+    /* Optional status-bar look */
+    .android-container::before{
+      content:"";
+      position:absolute;top:0;left:0;right:0;height:24px;
+      background:linear-gradient(to bottom,#333,#555);
+      z-index:5;
+    }
+    /* 3×3 grid */
+    .drink-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      padding:48px 20px 20px; /* leave room for status bar + header */
+      height:100%;
+      box-sizing:border-box;
+    }
+    .drink-item{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 2px 8px rgba(0,0,0,.1);
+      cursor:pointer;
+      aspect-ratio:1;      /* keep each tile square */
+      text-align:center;
+    }
+    .drink-item img{width:50px;height:50px;margin-bottom:6px;object-fit:contain;}
+    .drink-item span{font-size:14px;font-weight:500;color:#111;}
+  </style>
+
+  <!-- --------------  SCRIPTS -------------- -->
+  <!-- Angular + ngRoute from CDN (fixes 404) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+20250821-051216-index.html: before fixing width
+20250821-094820-index.html: broken
+20250821-095219-index.html: broken
+20250821-100131-index.html: recopied from original
+20250821-100605-index.html: needs editing
+20250821-100906-index.html: now has working android sizing but too short
