@@ -1,72 +1,43 @@
-/* Empty. Add your own CSS if you like */
-.mybox {   
-}
-/* ——— one drink tile ——— */
-.drink-container {
-  margin-top: 10px;
-  float: left;
-  height: 250px;                /* ↑ was 175px – gives room for name, icon, count */
-  width: 100px;
-  margin-bottom: 0;
-  border: solid 1px white;
-}
-/* icon area */
-.drink-icon,
-.drink-img {
-  height: 100px;
-  width: 100px;
-}
-/* count below the icon */
-.drink-count {
-  font-family: Verdana, serif;
-  font-style: normal;
-  font-size: 32px;
-  font-weight: bold;            /* was font-decoration */
-  text-align: center;
+/* Container for all the drink tiles */
+.mybox {
   padding-top: 10px;
 }
-/* drink name above the icon */
+
+/* A single drink tile */
+.drink-container {
+  float: left;
+  width: 100px;
+  height: 160px;  /* REDUCED from 210px to tighten rows */
+  margin-top: 5px;  /* REDUCED from 10px */
+  margin-bottom: 0;
+  border: 1px solid white;
+}
+
+/* Icon area inside the tile */
+.drink-icon,
+.drink-img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Drink name (e.g., "Coke") */
 .drink-name {
   font-family: Verdana, serif;
-  font-style: italic;
   font-size: 16px;
-  font-weight: bold;            /* was font-decoration */
+  font-style: italic;
+  font-weight: bold;
   text-align: center;
   padding-bottom: 5px;
-}
-.android-container {
-  width: 360px;          /* Typical Android width */
-  height: 680px;         /* Typical Android height */
-  margin: 10px auto;     /* Center it horizontally */
-  background: #f5f5f5;   /* Light background like Android */
-  border-radius: 20px;   /* Rounded corners like phone screen */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* Phone-like shadow */
-  overflow: hidden;      /* Keep content inside */
-  position: relative;
+  margin: 0;
 }
 
-.drink-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 40px 20px;    /* Top padding for status bar area */
-  height: 100%;
-  box-sizing: border-box;
+/* Drink count (e.g., "2") */
+.drink-count {
+  font-family: Verdana, serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px; /* Reduced from 10px */
+  margin: 0;
 }
 
-.drink-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  aspect-ratio: 1;       /* Keep items square */
-}
-
-.drink-item img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 8px;
-}

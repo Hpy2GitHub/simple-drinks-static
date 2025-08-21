@@ -2,100 +2,94 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Drinks!</title>
 
-    <!---- local styles exactly as before -->
-    <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/ionic/css/ionic-glyphs.css">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Link to external style.css is removed, as styles are now below -->
 
-    <!---- local scripts exactly as before -->
+    <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="js/angular-route.min.js"></script>
     <script src="js/ngStorage.min.js"></script>
     <script src="js/app.js"></script>
 
-    <!----  SMALL EXTRA CSS: phone wrapper + 3 × 3 grid  -->
+    <!-- =============================================================== -->
+    <!-- FINAL, CORRECTED STYLES FOR LAYOUT -->
+    <!-- =============================================================== -->
     <style>
-      /* phone-shaped wrapper centred on page */
-      .android-container{
-        width:360px;                 /* old Android width  */
-        height:640px;                /* old Android height */
-        margin:20px auto;            /* centre on screen   */
-        background:#f5f5f5;
-        border-radius:20px;
-        box-shadow:0 4px 20px rgba(0,0,0,.3);
-        overflow:hidden;
+      /* Container for all the drink tiles */
+      .mybox {
+        padding-top: 10px;
+        /* This ensures the floats are contained correctly */
+        overflow: auto; 
       }
 
-      /* 3 × 3 grid for drink tiles */
-      .drink-grid{
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:15px;
-        padding:20px;
+      /* A single drink tile */
+      .drink-container {
+        float: left;
+        width: 100px;
+        /* Reduced height to tighten the rows */
+        height: 160px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        border: 1px solid white;
+      }
+
+      /* Icon area inside the tile */
+      .drink-icon,
+      .drink-img {
+        width: 100px;
+        height: 100px;
+      }
+
+      /* Drink name (e.g., "Coke") */
+      .drink-name {
+        font-family: Verdana, serif;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 5px;
+        margin: 0;
+      }
+
+      /* Drink count (e.g., "2") */
+      .drink-count {
+        font-family: Verdana, serif;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 5px;
+        margin: 0;
       }
     </style>
   </head>
-
   <body ng-app="starter" ng-controller="MainCtrl" class="platform-browser">
-
-    <!--────────  NEW phone-sized wrapper  ────────-->
-    <div class="android-container">
-
-      <ion-pane>
-
-        <ion-header-bar class="bar-assertive">
-          <button class="button button-icon ion-minus-round"
-                  ng-click="rmDirection()"></button>
-          <h1 class="title">Drinks Tracker</h1>
-          <button class="button button-icon ion-plus-round"
-                  ng-click="addDirection()"></button>
-        </ion-header-bar>
-
+   <ion-pane>
+      <ion-header-bar class="bar-assertive">
+        <button class="button button-icon ion-minus-round" ng-click="rmDirection()"></button>
+        <h1 class="title">Drinks Tracker</h1>
+        <button class="button button-icon ion-plus-round" ng-click="addDirection()"></button>
+      </ion-header-bar>
         <ion-content>
-
-          <!--────────  NEW 3 × 3 grid wrapper  ────────-->
-          <div class="drink-grid">
-
-            <!-- your original list, unchanged -->
+       <div class="mybox">
             <div ng-repeat="drink in drinks">
-              <div class="drink-container">
-                <div class="drink-name">{{ drink.name }}</div>
-                <div class="drink-icon">
-                  <a href="" ng-click="imgClicked({{drink.id}})">
-                    <img src="img/{{drink.img}}.png"
-                         alt="{{drink.name}}"
-                         class="drink-img">
-                  </a>
+                <div class='drink-container'>
+                    <div class='drink-name'>{{ drink.name }}</div>
+                    <div class='drink-icon'><a href='' ng-click="imgClicked({{drink.id}})"><img src='img/{{drink.img}}.png' alt='{{drink.name}}' class='drink-img'></a></div>
+                  <div class='drink-count'>{{drink.count}}</div>
                 </div>
-                <div class="drink-count">{{ drink.count }}</div>
-              </div>
-            </div>
-
-          </div><!-- /drink-grid -->
-
-        </ion-content>
-
+           </div></div>
+       </ion-content>
         <div class="bar bar-footer bar-assertive">
-          <button class="button button-icon ion-close lc"
-                  ng-click="clearAll()"></button>
-          <!--button class="button button-icon ion-cloud rc"
-                  ng-click="saveAll()"></button-->
-
-          <!-- down arrow = upload       up arrow = download -->
-            <button class="button button-icon ion-arrow-down-a"
-                 ng-click="uploadData()"></button>
-            <button class="button button-icon ion-arrow-up-a"
-                 ng-click="downloadData()"></button>
+            <button class="button button-icon ion-close lc" ng-click="clearAll()"></button>
+            <button class="button button-icon ion-arrow-down-a" ng-click="downloadData()"></button>
+            <button class="button button-icon ion-arrow-up-a" ng-click="uploadData()"></button>
         </div>
-
-      </ion-pane>
-
-    </div><!-- /android-container -->
-
+      </ion-pane>   
   </body>
 </html>
 
