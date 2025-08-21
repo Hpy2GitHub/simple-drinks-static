@@ -3,12 +3,6 @@
 // Remove 'firebase' from dependencies, keep ngStorage
 angular.module('starter', ['ionic', 'ngRoute', 'ngStorage'])
 
-// Remove the Firebase factory completely
-// .factory('Items', ['$firebaseArray', function($firebaseArray) {
-//     var itemsRef = new Firebase('https://sweltering-heat-443.firebaseIO.com/app/ionic/drinks/'+$scope.today+'/');
-//     return $firebaseArray(itemsRef);
-// }])
-
 .controller('MainCtrl', function ($scope, $localStorage) {  
     
     // Initialize with saved data or default drinks
@@ -17,7 +11,7 @@ angular.module('starter', ['ionic', 'ngRoute', 'ngStorage'])
             {"name": "Coke", "img": "soda", "count": 0, "id": 0},
             {"name": "Gingerale", "img": "ysoda", "count": 0, "id": 1},
             {"name": "Coffee", "img": "cp4", "count": 0, "id": 2},
-            {"name": "Decaf Coffee", "img": "ycp4", "count": 0, "id": 3},
+            {"name": "Decaf", "img": "ycp4", "count": 0, "id": 3},
             {"name": "Tea", "img": "cup4", "count": 0, "id": 4},
             {"name": "Decaf Tea", "img": "ycup4", "count": 0, "id": 5},
             {"name": "Water", "img": "ywater", "count": 0, "id": 6},

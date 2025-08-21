@@ -1,0 +1,43 @@
+/* Container for all the drink tiles */
+.mybox {
+  padding-top: 10px;
+}
+
+/* A single drink tile */
+.drink-container {
+  float: left;
+  width: 100px;
+  height: 160px;  /* REDUCED from 210px to tighten rows */
+  margin-top: 5px;  /* REDUCED from 10px */
+  margin-bottom: 0;
+  border: 1px solid white;
+}
+
+/* Icon area inside the tile */
+.drink-icon,
+.drink-img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Drink name (e.g., "Coke") */
+.drink-name {
+  font-family: Verdana, serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 5px;
+  margin: 0;
+}
+
+/* Drink count (e.g., "2") */
+.drink-count {
+  font-family: Verdana, serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px; /* Reduced from 10px */
+  margin: 0;
+}
+

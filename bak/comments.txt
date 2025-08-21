@@ -5,3 +5,4 @@
 20250821-100605-index.html: needs editing
 20250821-100906-index.html: now has working android sizing but too short
 20250821-110736-index.html: before chatgpt fix
+20250821-120123-index.html: chatgpt removed android
