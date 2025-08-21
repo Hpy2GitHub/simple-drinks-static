@@ -84,10 +84,12 @@
                   ng-click="clearAll()"></button>
           <!--button class="button button-icon ion-cloud rc"
                   ng-click="saveAll()"></button-->
-          <button class="button button-icon ion-arrow-down-a"
-                  ng-click="downloadData()"></button>
-          <button class="button button-icon ion-arrow-up-a"
-                  ng-click="uploadData()"></button>
+
+          <!-- down arrow = upload       up arrow = download -->
+            <button class="button button-icon ion-arrow-down-a"
+                 ng-click="uploadData()"></button>
+            <button class="button button-icon ion-arrow-up-a"
+                 ng-click="downloadData()"></button>
         </div>
 
       </ion-pane>
